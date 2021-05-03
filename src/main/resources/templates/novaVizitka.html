@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="cs" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+<!--    nacteno z Bootstrepu -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+<!--    pozadi nove stranky -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <title>Přidat novou vizitku</title>
+</head>
+
+<!--    nadpis tucne-->
+<!--    pridani nove vizitky pomoci post (na pozadi) -->
+<!--    zalomene radky s plovoucimi bunkami (labely) -->
+<body>
+<div class="detail">
+
+    <h2><STRONG class="mt-5 mb-3" style="color: white">Vytvoř novou vizitku </STRONG></h2>
+
+        <form class="row g-3" th:action="@{/nova}" method="post">
+
+    <div class="form-floating">
+        <input type="text" class="form-control" id="jmeno" name="jmeno" placeholder="celejmeno">
+        <label for="jmeno">Celé jméno</label>
+    </div>
+
+        <div class="form-floating">
+            <input type="text" class="form-control" id="firma" name="firma" placeholder="firma">
+            <label for="firma">Firma</label>
+        </div>
+
+        <div class="form-floating">
+            <input type="text" class="form-control" id="ulice" name="ulice" placeholder="ulice">
+            <label for="ulice">Ulice</label>
+        </div>
+
+        <div class="form-floating">
+            <input type="text" class="form-control" id="obecPsc" name="obecPsc" placeholder="obecPsc">
+            <label for="obecPsc">Obec a PSČ</label>
+        </div>
+
+        <div class="form-floating">
+            <input type="text" class="form-control" id="email" name="email" placeholder="email">
+            <label for="email">Email</label>
+        </div>
+
+        <div class="form-floating">
+            <input type="text" class="form-control" id="telefon" name="telefon" placeholder="telefon">
+            <label for="telefon">Telefon</label>
+        </div>
+
+        <div class="form-floating">
+            <input type="text" class="form-control" id="web" name="web" placeholder="web">
+            <label for="web">Webové stránky</label>
+        </div>
+
+<!--    tlacitko s funkci pridat novou vizitku -->
+    <div class="col-md-1 align-self-end">
+        <button type="submit" class="btn btn-success">Přidej</button>
+    </div>
+
+</form>
+</div>
+</body>
+</html>
